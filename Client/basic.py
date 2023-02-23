@@ -20,8 +20,8 @@ import requests
 
 url = "http://127.0.0.1:8000/api/"
 
-response = requests.get(url)
+response = requests.get(url, json={"name": "Blendon", "age":23})
 print(response.text)
 print("-------------------------------------------------------------")
 todict = response.json()
-print(todict['message'])
+print(todict)

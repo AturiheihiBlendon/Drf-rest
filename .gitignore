@@ -1,4 +1,6 @@
 env
 Api/__pycache__
 Api/migrations/__pycache__
+Products/__pycache__
+Products/migrations/__pycache__
 Backend/__pycache__
