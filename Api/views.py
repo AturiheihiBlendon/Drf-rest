@@ -2,10 +2,12 @@ from django.http import JsonResponse
 import json
 from Products.models import Product
 from django.forms.models import model_to_dict
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
 
 # Create your views here.
 
-
+@api_view(['GET', 'POST'])
 def home(request, *args, **kwargs):
     # body = request.body
     # print(body)
@@ -22,4 +24,4 @@ def home(request, *args, **kwargs):
         # data['title'] = model_data.title
         # data['content'] = model_data.content
         # data['price'] = model_data.price
-    return JsonResponse(data)
+    return Response(data)
